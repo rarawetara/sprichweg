@@ -12,29 +12,51 @@
   },
   "courses": {
     "title": "Unsere Deutschkurse",
+    "badges": {
+      "beginner": "Beliebt",
+      "intermediate": "Bestseller",
+      "advanced": "Neu"
+    },
     "beginner": {
       "title": "Anfängerniveau (A1-A2)",
-      "description": "Baue eine solide Grundlage in Deutsch mit unseren Anfängerkursen. Lerne grundlegende Vokabeln, Grammatik und alltägliche Ausdrücke."
+      "description": "Baue eine solide Grundlage in Deutsch mit unseren Anfängerkursen. Lerne grundlegende Vokabeln, Grammatik und alltägliche Ausdrücke.",
+      "subtitle": "Lerne Deutsch mit Experten in einer angenehmen Umgebung und erreiche deine Sprachziele schneller",
+      "weeks": "Wochen",
+      "students": "Teilnehmer",
+      "learnMore": "Mehr erfahren"
     },
     "intermediate": {
       "title": "Mittelstufe (B1-B2)",
-      "description": "Erweitere deine Deutschkenntnisse mit komplexerer Grammatik, Konversationspraxis und kulturellen Einblicken."
+      "description": "Erweitere deine Deutschkenntnisse mit komplexerer Grammatik, Konversationspraxis und kulturellen Einblicken.",
+      "subtitle": "Lerne Deutsch mit Experten in einer angenehmen Umgebung und erreiche deine Sprachziele schneller",
+      "weeks": "Wochen",
+      "students": "Teilnehmer",
+      "learnMore": "Mehr erfahren"
     },
     "advanced": {
       "title": "Fortgeschrittenes Niveau (C1-C2)",
-      "description": "Perfektioniere dein Deutsch mit nuanciertem Vokabular, fortgeschrittener Grammatik und authentischen Diskussionen zu komplexen Themen."
+      "description": "Perfektioniere dein Deutsch mit nuanciertem Vokabular, fortgeschrittener Grammatik und authentischen Diskussionen zu komplexen Themen.",
+      "subtitle": "Lerne Deutsch mit Experten in einer angenehmen Umgebung und erreiche deine Sprachziele schneller",
+      "weeks": "Wochen",
+      "students": "Teilnehmer",
+      "learnMore": "Mehr erfahren"
     }
   },
   "about": {
     "title": "Über Sprichweg",
-    "description": "Sprichweg ist eine erstklassige Deutschsprachschule, die sich darauf konzentriert, Schülern durch immersive und ansprechende Lernmethoden zur Sprachbeherrschung zu verhelfen."
+    "description": "Sprichweg ist eine erstklassige Deutschsprachschule, die sich darauf konzentriert, Schülern durch immersive und ansprechende Lernmethoden zur Sprachbeherrschung zu verhelfen.",
+    "features": [
+      "Qualifizierte muttersprachliche Deutschlehrer",
+      "Kleine Gruppen für effektives Lernen",
+      "Moderne Lehrmethoden und Materialien",
+      "Online- und Präsenzunterricht",
+      "Individuelle Lernpläne"
+    ]
   },
   "contact": {
     "title": "Kontaktiere uns",
-    "name": "Name",
-    "email": "E-Mail",
-    "message": "Nachricht",
-    "submit": "Nachricht senden"
+    "subtitle": "Schreib uns auf Telegram und wir beantworten alle deine Fragen!",
+    "telegram": "Auf Telegram schreiben"
   },
   "footer": {
     "rights": "© 2025 Sprichweg. Alle Rechte vorbehalten.",

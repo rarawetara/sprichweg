@@ -3,38 +3,63 @@
     "home": "Home",
     "courses": "Courses",
     "about": "About Us",
-    "contact": "Contact"
+    "contact": "Contact",
+    "getStarted": "Start Learning"
   },
   "hero": {
     "title": "Learn German with Sprichweg",
     "subtitle": "Your path to fluent German speaking",
-    "cta": "Start Learning Today"
+    "cta": "Start Learning Today",
+    "invitation": "We invite you to discover the magical world of German with our experts!"
   },
   "courses": {
     "title": "Our German Courses",
+    "badges": {
+      "beginner": "Popular",
+      "intermediate": "Bestseller",
+      "advanced": "New"
+    },
     "beginner": {
       "title": "Beginner Level (A1-A2)",
-      "description": "Build a solid foundation in German with our beginner courses. Learn basic vocabulary, grammar, and everyday phrases."
+      "description": "Build a solid foundation in German with our beginner courses. Learn basic vocabulary, grammar, and everyday phrases.",
+      "subtitle": "Learn German with experts in a comfortable environment and achieve your language goals faster",
+      "weeks": "weeks",
+      "students": "students",
+      "learnMore": "Learn more"
     },
     "intermediate": {
       "title": "Intermediate Level (B1-B2)",
-      "description": "Expand your German skills with more complex grammar, conversational practice, and cultural insights."
+      "description": "Expand your German skills with more complex grammar, conversational practice, and cultural insights.",
+      "subtitle": "Learn German with experts in a comfortable environment and achieve your language goals faster",
+      "weeks": "weeks",
+      "students": "students",
+      "learnMore": "Learn more"
     },
     "advanced": {
       "title": "Advanced Level (C1-C2)",
-      "description": "Perfect your German with nuanced vocabulary, advanced grammar, and authentic discussions on complex topics."
-    }
+      "description": "Perfect your German with nuanced vocabulary, advanced grammar, and authentic discussions on complex topics.",
+      "subtitle": "Learn German with experts in a comfortable environment and achieve your language goals faster",
+      "weeks": "weeks",
+      "students": "students",
+      "learnMore": "Learn more"
+    },
+    "learnMore": "Learn more"
   },
   "about": {
     "title": "About Sprichweg",
-    "description": "Sprichweg is a premier German language school dedicated to helping students achieve fluency through immersive and engaging learning methods."
+    "description": "Sprichweg is a premier German language school dedicated to helping students achieve fluency through immersive and engaging learning methods.",
+    "features": [
+      "Qualified native German teachers",
+      "Small groups for effective learning",
+      "Modern teaching methods and materials",
+      "Online and offline classes",
+      "Individual learning plans"
+    ]
   },
   "contact": {
     "title": "Contact Us",
-    "name": "Name",
-    "email": "Email",
-    "message": "Message",
-    "submit": "Send Message"
+    "subtitle": "Write to us in Telegram and we will answer all your questions!",
+    "telegram": "Write in Telegram"
   },
   "footer": {
     "rights": "© 2025 Sprichweg. All rights reserved.",

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 const CoursesSection = styled.section`
   padding: 8rem 0;
@@ -192,6 +193,7 @@ const BackgroundElement2 = styled.div`
 `;
 
 const Courses = () => {
+  const { t } = useTranslation();
   const cardsRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
@@ -226,45 +228,35 @@ const Courses = () => {
     advanced: '/images/german-advanced.jpg'
   };
   
-  const courseBadges = {
-    beginner: 'Популярний',
-    intermediate: 'Бестселер',
-    advanced: 'Новий'
-  };
-  
   return (
     <CoursesSection id="courses">
       <BackgroundElement />
       <BackgroundElement2 />
       <div className="container">
-        <SectionTitle>Наші курси німецької</SectionTitle>
+        <SectionTitle>{t('courses.title')}</SectionTitle>
         <SectionSubtitle>
-          Вивчайте німецьку мову з експертами в комфортному середовищі 
-          та досягайте своїх мовних цілей швидше
+          {t('courses.subtitle', 'Вивчайте німецьку мову з експертами в комфортному середовищі та досягайте своїх мовних цілей швидше')}
         </SectionSubtitle>
         
         <CourseGrid ref={cardsRef}>
           <CourseCard className="course-card animate-on-scroll">
             <ImageContainer>
               <CourseImage src={courseImages.beginner} alt="Beginner German Course" />
-              <CourseBadge>{courseBadges.beginner}</CourseBadge>
+              <CourseBadge>{t('courses.badges.beginner')}</CourseBadge>
             </ImageContainer>
             <CourseContent>
-              <CourseTitle>Початковий рівень (A1-A2)</CourseTitle>
-              <CourseDescription>
-                Побудуйте міцну основу в німецькій мові з нашими курсами для початківців. 
-                Вивчайте базову лексику, граматику та повсякденні фрази.
-              </CourseDescription>
+              <CourseTitle>{t('courses.beginner.title')}</CourseTitle>
+              <CourseDescription>{t('courses.beginner.description')}</CourseDescription>
               <CourseFooter>
                 <CourseFeatures>
                   <CourseFeature>
-                    <span>🕒</span> 8 тижнів
+                    <span>🕒</span> 8 {t('courses.weeks', 'тижнів')}
                   </CourseFeature>
                   <CourseFeature>
-                    <span>👥</span> 8-12 учнів
+                    <span>👥</span> 8-12 {t('courses.students', 'учнів')}
                   </CourseFeature>
                 </CourseFeatures>
-                <LearnMoreButton href="#contact">Дізнатися більше</LearnMoreButton>
+                <LearnMoreButton href="#contact">{t('courses.learnMore', 'Дізнатися більше')}</LearnMoreButton>
               </CourseFooter>
             </CourseContent>
           </CourseCard>
@@ -272,24 +264,21 @@ const Courses = () => {
           <CourseCard className="course-card animate-on-scroll">
             <ImageContainer>
               <CourseImage src={courseImages.intermediate} alt="Intermediate German Course" />
-              <CourseBadge>{courseBadges.intermediate}</CourseBadge>
+              <CourseBadge>{t('courses.badges.intermediate')}</CourseBadge>
             </ImageContainer>
             <CourseContent>
-              <CourseTitle>Середній рівень (B1-B2)</CourseTitle>
-              <CourseDescription>
-                Розширте свої знання німецької мови зі складнішою граматикою, 
-                розмовною практикою та культурними знаннями.
-              </CourseDescription>
+              <CourseTitle>{t('courses.intermediate.title')}</CourseTitle>
+              <CourseDescription>{t('courses.intermediate.description')}</CourseDescription>
               <CourseFooter>
                 <CourseFeatures>
                   <CourseFeature>
-                    <span>🕒</span> 10 тижнів
+                    <span>🕒</span> 10 {t('courses.weeks', 'тижнів')}
                   </CourseFeature>
                   <CourseFeature>
-                    <span>👥</span> 6-10 учнів
+                    <span>👥</span> 6-10 {t('courses.students', 'учнів')}
                   </CourseFeature>
                 </CourseFeatures>
-                <LearnMoreButton href="#contact">Дізнатися більше</LearnMoreButton>
+                <LearnMoreButton href="#contact">{t('courses.learnMore', 'Дізнатися більше')}</LearnMoreButton>
               </CourseFooter>
             </CourseContent>
           </CourseCard>
@@ -297,24 +286,21 @@ const Courses = () => {
           <CourseCard className="course-card animate-on-scroll">
             <ImageContainer>
               <CourseImage src={courseImages.advanced} alt="Advanced German Course" />
-              <CourseBadge>{courseBadges.advanced}</CourseBadge>
+              <CourseBadge>{t('courses.badges.advanced')}</CourseBadge>
             </ImageContainer>
             <CourseContent>
-              <CourseTitle>Просунутий рівень (C1-C2)</CourseTitle>
-              <CourseDescription>
-                Відшліфуйте свою німецьку мову з нюансованим словниковим запасом, 
-                поглибленою граматикою та автентичними дискусіями.
-              </CourseDescription>
+              <CourseTitle>{t('courses.advanced.title')}</CourseTitle>
+              <CourseDescription>{t('courses.advanced.description')}</CourseDescription>
               <CourseFooter>
                 <CourseFeatures>
                   <CourseFeature>
-                    <span>🕒</span> 12 тижнів
+                    <span>🕒</span> 12 {t('courses.weeks', 'тижнів')}
                   </CourseFeature>
                   <CourseFeature>
-                    <span>👥</span> 4-8 учнів
+                    <span>👥</span> 4-8 {t('courses.students', 'учнів')}
                   </CourseFeature>
                 </CourseFeatures>
-                <LearnMoreButton href="#contact">Дізнатися більше</LearnMoreButton>
+                <LearnMoreButton href="#contact">{t('courses.learnMore', 'Дізнатися більше')}</LearnMoreButton>
               </CourseFooter>
             </CourseContent>
           </CourseCard>

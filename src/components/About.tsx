@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 const AboutSection = styled.section`
   padding: 8rem 0;
@@ -188,6 +189,7 @@ const BackgroundGradient2 = styled.div`
 `;
 
 const About = () => {
+  const { t } = useTranslation();
   const featuresRef = useRef<HTMLUListElement>(null);
   
   useEffect(() => {
@@ -215,13 +217,8 @@ const About = () => {
     };
   }, []);
   
-  const featuresData = [
-    { icon: '👨‍🏫', text: 'Кваліфіковані викладачі-носії німецької мови' },
-    { icon: '👥', text: 'Малі групи для ефективного навчання' },
-    { icon: '📚', text: 'Сучасні методи та матеріали навчання' },
-    { icon: '💻', text: 'Онлайн та офлайн заняття' },
-    { icon: '📋', text: 'Індивідуальні навчальні плани' }
-  ];
+  const featuresIcons = ['👨‍🏫', '👥', '📚', '💻', '📋'];
+  const featuresData = t('about.features', { returnObjects: true }) as string[];
   
   return (
     <AboutSection id="about">
@@ -230,17 +227,13 @@ const About = () => {
       <div className="container">
         <AboutContainer>
           <AboutContent>
-            <SectionTitle>Про Sprichweg</SectionTitle>
-            <AboutDescription>
-              Sprichweg - це провідна школа німецької мови, яка допомагає студентам досягти 
-              вільного володіння через імерсивні та захоплюючі методи навчання. Наша місія - 
-              зробити вивчення німецької мови доступним, ефективним та приємним для кожного.
-            </AboutDescription>
+            <SectionTitle>{t('about.title')}</SectionTitle>
+            <AboutDescription>{t('about.description')}</AboutDescription>
             <FeatureList ref={featuresRef}>
               {featuresData.map((feature, index) => (
                 <FeatureItem key={index}>
-                  <FeatureIcon>{feature.icon}</FeatureIcon>
-                  <FeatureText>{feature.text}</FeatureText>
+                  <FeatureIcon>{featuresIcons[index]}</FeatureIcon>
+                  <FeatureText>{feature}</FeatureText>
                 </FeatureItem>
               ))}
             </FeatureList>
@@ -248,7 +241,7 @@ const About = () => {
           
           <AboutImageContainer>
             <MainImage 
-              src="/images/german-classroom.jpg" 
+              src="images/german-classroom.jpg" 
               alt="Students learning German"
             />
             <FloatingImage1 

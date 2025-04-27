@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 const HeroContainer = styled.section`
   background-color: white;
@@ -99,6 +100,7 @@ const ScrollIndicator = styled.div`
 `;
 
 const Hero = () => {
+  const { t } = useTranslation();
   const scrollToSection = () => {
     document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -108,15 +110,15 @@ const Hero = () => {
       <div className="container">
         <HeroContent>
           <HeroTitle>
-            Learn German
-            <span>with Sprichweg</span>
+            {t('hero.title')}
+            <span>{t('hero.title2', 'with Sprichweg')}</span>
           </HeroTitle>
-          <HeroSubtitle>Your path to fluent German speaking</HeroSubtitle>
+          <HeroSubtitle>{t('hero.subtitle')}</HeroSubtitle>
           <Invitation>
-            Ми запрошуємо вас відкрити чарівний світ німецької мови разом з нашими експертами!
+            {t('hero.invitation')}
           </Invitation>
           <PrimaryButton onClick={scrollToSection}>
-            Start Learning Today
+            {t('header.getStarted')}
           </PrimaryButton>
         </HeroContent>
       </div>

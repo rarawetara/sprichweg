@@ -157,113 +157,39 @@ const Subtitle = styled.p`
   line-height: 1.6;
 `;
 
+const TelegramButton = styled.a`
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  background-color: #229ED9;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.15rem;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 2.5rem;
+  box-shadow: 0 2px 8px rgba(34,158,217,0.08);
+  transition: background 0.2s, transform 0.2s;
+  &:hover {
+    background-color: #1b7fb6;
+    transform: translateY(-2px) scale(1.03);
+  }
+`;
+
 const Contact = () => {
   const { t } = useTranslation();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [errors, setErrors] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-  
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    // Clear error when user starts typing again
-    if (errors[name as keyof typeof errors]) {
-      setErrors(prev => ({ ...prev, [name]: '' }));
-    }
-  };
-  
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Simple validation
-    const newErrors = {
-      name: !formData.name ? t('contact.errors.nameRequired') : '',
-      email: !formData.email ? t('contact.errors.emailRequired') : 
-             !/\S+@\S+\.\S+/.test(formData.email) ? t('contact.errors.emailInvalid') : '',
-      message: !formData.message ? t('contact.errors.messageRequired') : ''
-    };
-    
-    setErrors(newErrors);
-    
-    // If no errors, submit form
-    if (!newErrors.name && !newErrors.email && !newErrors.message) {
-      setIsSubmitting(true);
-      
-      // Simulate API call
-      try {
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        setSubmitSuccess(true);
-        setFormData({ name: '', email: '', message: '' });
-      } catch (error) {
-        console.error('Error submitting form:', error);
-      } finally {
-        setIsSubmitting(false);
-      }
-    }
-  };
-  
   return (
     <ContactSection id="contact">
       <BlobLeft />
       <BlobRight />
       <SectionTitle>{t('contact.title')}</SectionTitle>
       <Subtitle>{t('contact.subtitle')}</Subtitle>
-      
-      <ContactForm onSubmit={handleSubmit}>
-        <InputGroup>
-          <Label htmlFor="name">{t('contact.form.name')}</Label>
-          <Input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-          {errors.name && <ErrorMessage>{errors.name}</ErrorMessage>}
-        </InputGroup>
-        
-        <InputGroup>
-          <Label htmlFor="email">{t('contact.form.email')}</Label>
-          <Input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-          {errors.email && <ErrorMessage>{errors.email}</ErrorMessage>}
-        </InputGroup>
-        
-        <InputGroup>
-          <Label htmlFor="message">{t('contact.form.message')}</Label>
-          <TextArea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-          />
-          {errors.message && <ErrorMessage>{errors.message}</ErrorMessage>}
-        </InputGroup>
-        
-        <SubmitButton type="submit" disabled={isSubmitting}>
-          {isSubmitting ? t('contact.form.sending') : t('contact.form.send')}
-        </SubmitButton>
-        
-        {submitSuccess && (
-          <SuccessMessage>
-            {t('contact.form.success')}
-          </SuccessMessage>
-        )}
-      </ContactForm>
+      <TelegramButton
+        href="https://t.me/sprichweg"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {t('contact.telegram')}
+      </TelegramButton>
     </ContactSection>
   );
 };

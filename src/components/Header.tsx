@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import LanguageSwitcher from './LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
 
 const HeaderContainer = styled.header<{ isScrolled: boolean }>`
   background-color: ${props => props.isScrolled ? 'rgba(255, 255, 255, 0.98)' : 'transparent'};
@@ -131,6 +132,7 @@ const GetStartedButton = styled.a`
 `;
 
 const Header = () => {
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -226,7 +228,7 @@ const Header = () => {
           <RightSection>
             <LanguageSwitcher />
             <GetStartedButton href="#contact">
-              Почати навчання
+              {t('header.getStarted')}
             </GetStartedButton>
           </RightSection>
         </Nav>
