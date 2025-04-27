@@ -1,0 +1,44 @@
+{
+  "header": {
+    "home": "Home",
+    "courses": "Courses",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Learn German with Sprichweg",
+    "subtitle": "Your path to fluent German speaking",
+    "cta": "Start Learning Today"
+  },
+  "courses": {
+    "title": "Our German Courses",
+    "beginner": {
+      "title": "Beginner Level (A1-A2)",
+      "description": "Build a solid foundation in German with our beginner courses. Learn basic vocabulary, grammar, and everyday phrases."
+    },
+    "intermediate": {
+      "title": "Intermediate Level (B1-B2)",
+      "description": "Expand your German skills with more complex grammar, conversational practice, and cultural insights."
+    },
+    "advanced": {
+      "title": "Advanced Level (C1-C2)",
+      "description": "Perfect your German with nuanced vocabulary, advanced grammar, and authentic discussions on complex topics."
+    }
+  },
+  "about": {
+    "title": "About Sprichweg",
+    "description": "Sprichweg is a premier German language school dedicated to helping students achieve fluency through immersive and engaging learning methods."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send Message"
+  },
+  "footer": {
+    "rights": "© 2025 Sprichweg. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+} 

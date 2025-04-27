@@ -1,0 +1,44 @@
+{
+  "header": {
+    "home": "Startseite",
+    "courses": "Kurse",
+    "about": "Über uns",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Deutsch lernen mit Sprichweg",
+    "subtitle": "Dein Weg zum fließenden Deutsch",
+    "cta": "Jetzt mit dem Lernen beginnen"
+  },
+  "courses": {
+    "title": "Unsere Deutschkurse",
+    "beginner": {
+      "title": "Anfängerniveau (A1-A2)",
+      "description": "Baue eine solide Grundlage in Deutsch mit unseren Anfängerkursen. Lerne grundlegende Vokabeln, Grammatik und alltägliche Ausdrücke."
+    },
+    "intermediate": {
+      "title": "Mittelstufe (B1-B2)",
+      "description": "Erweitere deine Deutschkenntnisse mit komplexerer Grammatik, Konversationspraxis und kulturellen Einblicken."
+    },
+    "advanced": {
+      "title": "Fortgeschrittenes Niveau (C1-C2)",
+      "description": "Perfektioniere dein Deutsch mit nuanciertem Vokabular, fortgeschrittener Grammatik und authentischen Diskussionen zu komplexen Themen."
+    }
+  },
+  "about": {
+    "title": "Über Sprichweg",
+    "description": "Sprichweg ist eine erstklassige Deutschsprachschule, die sich darauf konzentriert, Schülern durch immersive und ansprechende Lernmethoden zur Sprachbeherrschung zu verhelfen."
+  },
+  "contact": {
+    "title": "Kontaktiere uns",
+    "name": "Name",
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "submit": "Nachricht senden"
+  },
+  "footer": {
+    "rights": "© 2025 Sprichweg. Alle Rechte vorbehalten.",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen"
+  }
+} 
