@@ -250,7 +250,7 @@ const Courses = () => {
               <CourseFooter>
                 <CourseFeatures>
                   <CourseFeature>
-                    <span>🕒</span>5{t('courses.weeks', 'тижнів')}
+                    <span>🕒</span> 5 {t('courses.weeks', 'тижнів')}
                   </CourseFeature>
                   <CourseFeature>
                     <span>👥</span> 8-12 {t('courses.students', 'учнів')}
@@ -272,10 +272,10 @@ const Courses = () => {
               <CourseFooter>
                 <CourseFeatures>
                   <CourseFeature>
-                    <span>🕒</span>10{t('courses.weeks', 'тижнів')}
+                    <span>🕒</span> 10 {t('courses.weeks', 'тижнів')}
                   </CourseFeature>
                   <CourseFeature>
-                    <span>👥</span> 1 {t('courses.students', 'учнів')}
+                    <span>👥</span> 8-12 {t('courses.students', 'учнів')}
                   </CourseFeature>
                 </CourseFeatures>
                 <LearnMoreButton href="#contact">{t('courses.learnMore', 'Дізнатися більше')}</LearnMoreButton>
@@ -294,7 +294,7 @@ const Courses = () => {
               <CourseFooter>
                 <CourseFeatures>
                   <CourseFeature>
-                    <span>🕒</span>12{t('courses.weeks', 'тижнів')}
+                    <span>🕒</span> 12 {t('courses.weeks', 'тижнів')}
                   </CourseFeature>
                   <CourseFeature>
                     <span>👥</span> 4-8 {t('courses.students', 'учнів')}
